@@ -12,10 +12,18 @@ async function app(state, update, view){
     console.log(title)
     printTable(table)
     //FORM (Ask user input)
-    const {billAmount, tip} = await inputForm(model)
-    console.log(billAmount, tip)
+    const {billAmount, percentage} = await inputForm(model)
+    console.log(billAmount, percentage)
+    const updatedModel = update(billAmount,percentage,model)
+    console.log(updatedModel)
+    state = {
+        ...state,
+        model: updatedModel,
+        currentView: view(updatedModel)
+    }
 }
 
+//lo debería poner en un while
 
 module.exports = {
     app

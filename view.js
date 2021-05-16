@@ -42,12 +42,12 @@ function inputForm(model){
         },
         {
             type: 'number',
-            name:'tip',
+            name:'percentage',
             message: 'Tip(%)?',
             default: percentage,
             validate: function(value){
                 if(isNaN(value) === true ){
-                    return 'Please enter a number!'
+                    return `Please enter a number!`
                 } else {
                     return true
                 }

@@ -2,7 +2,8 @@
 //modelo me trae el input del usuario
 
 function tipNew(bill, percent){
-    return (bill*percent/100)
+    const tipValue = bill*percent/100
+    return Math.round((tipValue + Number.EPSILON)*100) /100
 }
 
 function totalNew(bill, percent){

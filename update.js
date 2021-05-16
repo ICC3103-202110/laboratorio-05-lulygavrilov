@@ -1,5 +1,4 @@
 
-//modelo me trae el input del usuario
 
 function tipNew(bill, percent){
     const tipValue = bill*percent/100

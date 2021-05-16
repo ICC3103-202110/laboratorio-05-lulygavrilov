@@ -2,7 +2,7 @@ const figlet = require('figlet')
 const chalk = require('chalk')
 const inquirer = require('inquirer')
 
-//acá todo tiene que ser funcional
+//Acá todo tiene que ser funcional
 
 function getTitle(){
     return chalk.magenta(

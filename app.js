@@ -12,8 +12,8 @@ async function app(state, update, view){
     console.log(title)
     printTable(table)
     //FORM (Ask user input)
-    const{input} = await inputForm(model)
-    console.log(input)
+    const {billAmount, tip} = await inputForm(model)
+    console.log(billAmount, tip)
 }
 
 

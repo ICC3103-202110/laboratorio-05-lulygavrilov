@@ -29,7 +29,7 @@ function inputForm(model){
     return inquirer.prompt([
         {
             type: 'number',
-            name: 'bill amount',
+            name: 'billAmount',
             message: 'Bill Amount?',
             default: billAmount,
             validate: function(value){

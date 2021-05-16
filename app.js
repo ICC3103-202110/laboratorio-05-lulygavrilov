@@ -14,9 +14,7 @@ async function app(state, update, view){
         printTable(table)
     //FORM (Ask user input)
         const {billAmount, percentage} = await inputForm(model)
-        console.log(billAmount, percentage)
         const updatedModel = update(billAmount,percentage,model)
-        console.log(updatedModel)
         state = {
             ...state,
             model: updatedModel,

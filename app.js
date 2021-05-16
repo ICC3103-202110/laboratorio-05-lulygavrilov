@@ -1,6 +1,6 @@
 const {getTitle} = require ('./view')
 const {inputForm} = require('./view')
-const printTable = require('console-table-printer')
+const {printTable} = require('console-table-printer')
 
 //Impure
 
@@ -10,7 +10,7 @@ async function app(state, update, view){
     // I/O
     console.clear()
     console.log(title)
-    console.log()
+    printTable(table)
     //FORM (Ask user input)
     const{input} = await inputForm(model)
     console.log(input)

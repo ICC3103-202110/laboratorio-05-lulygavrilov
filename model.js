@@ -1,4 +1,4 @@
-//modelo inicial
+//initial model for default
 
 initModel = {
     billAmount: 1000,

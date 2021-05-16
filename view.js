@@ -2,7 +2,7 @@ const figlet = require('figlet')
 const chalk = require('chalk')
 const inquirer = require('inquirer')
 
-//Acá todo tiene que ser funcional
+//Everything functional
 
 function getTitle(){
     return chalk.magenta(
@@ -56,7 +56,7 @@ function inputForm(model){
     ])
 }
 
-//Vista Real
+//The Actual View
 
 function view(model){
     return {

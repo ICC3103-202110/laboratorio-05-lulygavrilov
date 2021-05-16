@@ -1,10 +1,10 @@
 //modelo inicial
 
 initModel = {
-    billAmount:0,
-    percentage: '%',
-    tip: 0,
-    total: 0
+    billAmount: 1000,
+    percentage: 10,
+    tip: 100,
+    total: 1010
 }
 
 module.exports = {

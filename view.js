@@ -31,6 +31,7 @@ function inputForm(model){
             type: 'number',
             name: 'bill amount',
             message: 'Bill Amount?',
+            default: billAmount,
             validate: function(value){
                 if(isNaN(value) === true ){
                     return 'Please enter a number!'
@@ -43,6 +44,7 @@ function inputForm(model){
             type: 'number',
             name:'tip',
             message: 'Tip(%)?',
+            default: percentage,
             validate: function(value){
                 if(isNaN(value) === true ){
                     return 'Please enter a number!'

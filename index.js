@@ -6,7 +6,6 @@ const {view} = require('./view')
 const state = {
     model: initModel,
     currentView: view(initModel)
-    //view(initModel)
 }
 
 app(state, update, view)

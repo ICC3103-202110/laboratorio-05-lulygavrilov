@@ -28,7 +28,7 @@ function inputForm(model){
     const {percentage} = model
     return inquirer.prompt([
         {
-            type: 'number',
+            type: 'input',
             name: 'billAmount',
             message: 'Bill Amount?',
             default: billAmount,
@@ -41,7 +41,7 @@ function inputForm(model){
             }
         },
         {
-            type: 'number',
+            type: 'input',
             name:'percentage',
             message: 'Tip(%)?',
             default: percentage,

@@ -6,7 +6,7 @@ function tipNew(bill, percent){
 }
 
 function totalNew(bill, percent){
-    return (bill + tipNew(bill,percent))
+    return (+bill + +tipNew(bill,percent))
 }
 
 function update(bill, percent, model){

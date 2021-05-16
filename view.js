@@ -1,6 +1,6 @@
 const figlet = require('figlet')
 const chalk = require('chalk')
-const inquirer = requite('inquirer')
+const inquirer = require('inquirer')
 
 //acá todo tiene que ser funcional
 
@@ -13,7 +13,7 @@ function getTitle(){
     )
 }
 
-function getTable(number){
+function getTable(model){
     const {billAmount} = model
     const {percentage} = model
     const {tip} = model
@@ -23,7 +23,7 @@ function getTable(number){
     ]
 }
 
-function valueInput(input){
+function inputForm(model){
     const {billAmount} = model
     const {percentage} = model
     return inquirer.prompt([
@@ -31,16 +31,39 @@ function valueInput(input){
             type: 'number',
             name: 'bill amount',
             message: 'Bill Amount?',
+            validate: function(value){
+                if(isNaN(value) === true ){
+                    return 'Please enter a number!'
+                } else {
+                    return true
+                }
+            }
         },
         {
             type: 'number',
             name:'tip',
             message: 'Tip(%)?',
+            validate: function(value){
+                if(isNaN(value) === true ){
+                    return 'Please enter a number!'
+                } else {
+                    return true
+                }
+            }
         },
     ])
 }
 
+//Vista Real
+
+function view(model){
+    return {
+        title: getTitle(),
+        table: getTable(model)
+    }
+}
 
 module.exports = {
-    getTitle
+    view,
+    inputForm
 }
